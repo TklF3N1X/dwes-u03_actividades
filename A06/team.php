@@ -50,17 +50,14 @@ class Team {
                      'País: ' . $this->country . '<br>';
 
         $resultado .= '<h3>Pilotos</h3>';
-
         foreach ($this->riders as $rider) {
             $resultado .= $rider->toString() . '<br><br>';
         }
 
         $resultado .= '<h3>Mecánicos</h3>';
-
         foreach ($this->mechanics as $mechanic) {
             $resultado .= $mechanic->toString() . '<br><br>';
         }
-
         return $resultado;
     }
 }

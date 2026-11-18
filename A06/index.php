@@ -3,50 +3,40 @@ require_once 'utils.inc.php';
 require_once 'team.php';
 require_once 'grandprix.php';
 
-// CREACIÓN DE EQUIPOS
-
 $team1 = new Team('Ducati', 1);
 $team2 = new Team('Yamaha', 2);
 $team3 = new Team('KTM', 3);
 
-// PILOTOS DEL EQUIPO 1
 $rider1 = new Rider('Marc Márquez', '17/02/1993', 93);
 $rider2 = new Rider('Francesco Bagnaia', '14/01/1997', 63);
 
 $team1->addRider($rider1);
 $team1->addRider($rider2);
 
-// MECÁNICOS DEL EQUIPO 1
 $mechanic1 = new Mechanic('David García', '10/05/1980', 'Motor');
 $mechanic2 = new Mechanic('Carlos López', '20/08/1985', 'Neumáticos');
 
 $team1->addMechanic($mechanic1);
 $team1->addMechanic($mechanic2);
 
-
-// PILOTOS DEL EQUIPO 2
 $rider3 = new Rider('Fabio Quartararo', '20/04/1999', 20);
 $rider4 = new Rider('Alex Rins', '08/12/1995', 42);
 
 $team2->addRider($rider3);
 $team2->addRider($rider4);
 
-// MECÁNICOS DEL EQUIPO 2
 $mechanic3 = new Mechanic('Miguel Torres', '12/03/1978', 'Electricidad');
 $mechanic4 = new Mechanic('Pedro Sánchez', '05/06/1982', 'Suspensión');
 
 $team2->addMechanic($mechanic3);
 $team2->addMechanic($mechanic4);
 
-
-// PILOTOS DEL EQUIPO 3
 $rider5 = new Rider('Pedro Acosta', '25/05/2004', 37);
 $rider6 = new Rider('Brad Binder', '11/08/1995', 33);
 
 $team3->addRider($rider5);
 $team3->addRider($rider6);
 
-// MECÁNICOS DEL EQUIPO 3
 $mechanic5 = new Mechanic('Javier Ruiz', '15/09/1981', 'Frenos');
 $mechanic6 = new Mechanic('Andrés Martín', '22/02/1984', 'Electrónica');
 

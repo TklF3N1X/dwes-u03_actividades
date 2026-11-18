@@ -36,25 +36,21 @@ class GrandPrix {
         if (array_key_exists($position, $this->riders)) {
             return false;
         }
-
         $this->riders[$position] = $rider;
         return true;
     }
 
     public function results(): string {
         $resultado = '<h3>Resultados</h3>';
-
         if (count($this->riders) == 0) {
             return $resultado . 'No hay pilotos registrados.';
         }
 
         ksort($this->riders);
-
         foreach ($this->riders as $position => $rider) {
             $resultado .= 'Posición: ' . $position . '<br>' .
                           $rider->toString() . '<br><br>';
         }
-
         return $resultado;
     }
 
